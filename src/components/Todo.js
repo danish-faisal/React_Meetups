@@ -1,6 +1,11 @@
+import { useState } from "react";
+import Backdrop from "./Backdrop";
+import Modal from "./Modal";
+
 const Todo = (props) => {
+    const [showModal, setShowModal] = useState(false);
     function deleteHandler() {
-        console.log(props.text);
+        setShowModal(true);
     }
 
     return (
@@ -9,6 +14,8 @@ const Todo = (props) => {
             <div className="actions">
                 <button className="btn" onClick={deleteHandler}>Delete</button>
             </div>
+            {showModal && <Modal />}
+            {showModal && <Backdrop />}
         </div>
     )
 }
