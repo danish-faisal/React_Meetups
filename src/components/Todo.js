@@ -4,8 +4,13 @@ import Modal from "./Modal";
 
 const Todo = (props) => {
     const [showModal, setShowModal] = useState(false);
+
     function deleteHandler() {
         setShowModal(true);
+    }
+
+    function modalFuncsHandler() {
+        setShowModal(false);
     }
 
     return (
@@ -14,8 +19,8 @@ const Todo = (props) => {
             <div className="actions">
                 <button className="btn" onClick={deleteHandler}>Delete</button>
             </div>
-            {showModal && <Modal />}
-            {showModal && <Backdrop />}
+            {showModal && <Modal onCancel={modalFuncsHandler} onConfirm={modalFuncsHandler} />}
+            {showModal && <Backdrop onCancel={modalFuncsHandler} />}
         </div>
     )
 }
