@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Project Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A meetups app built using React & Firebase, deployed on Vercel
+
+Live: https://react-meetups-amber.vercel.app/
 
 ## Available Scripts
 
